@@ -4,8 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MWArsenal HUD Layout</title>
-    <script type="module" crossorigin src="./assets/index-BqiQLEY1.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BoXKmByt.css">
+    <script>
+      (() => {
+        const key = "mwarsenal-hud-editor-theme";
+        let preference = "light";
+        try {
+          const stored = window.localStorage.getItem(key);
+          if (stored === "dark" || stored === "light") {
+            preference = stored;
+          }
+        }
+        catch {
+          // Light remains the default when local storage is unavailable.
+        }
+        document.documentElement.dataset.theme = preference;
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-Cmfs0WmN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BXXwX2By.css">
   </head>
   <body>
     <div id="root"></div>
