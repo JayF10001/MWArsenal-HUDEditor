@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MWArsenal HUD Layout</title>
+    <script>
+      (() => {
+        const repositoryPath = "/MWArsenal-HUDEditor";
+        const base = window.location.pathname.startsWith(`${repositoryPath}/`) ? repositoryPath : "";
+        const route = window.location.pathname.slice(base.length) || "/drafts";
+        window.location.replace(`${window.location.origin}${base}/?route=${encodeURIComponent(route)}`);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
